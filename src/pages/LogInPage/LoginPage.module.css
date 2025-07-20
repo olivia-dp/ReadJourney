@@ -1,0 +1,256 @@
+.logBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--light-black);
+border-radius: 30px;
+margin-bottom: 10px;
+}
+.title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+font-weight: 700;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 0.02em;
+color: #f9f9f9;
+}
+.accent {
+    color: rgba(227, 227, 227, 0.5);
+}
+.logo {
+    width: 42px;
+    height: 17px;
+    fill: var(--white);
+
+}
+
+.prevBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background-color: var(--light-black);
+border-radius: 30px;
+padding: 20px 40px 0px 40px;
+}
+.inputBox {
+    margin-bottom: 72px;
+}
+.input {
+border: none;
+    border-radius: 12px;
+    padding: 14px 14px 14px 49px;
+
+width: 100%;
+height: 44px;
+background-color: var(--dark-grey);
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 12px;
+line-height: 133%;
+letter-spacing: -0.02em;
+color: var(--white);
+margin-bottom: 8px;
+}
+.inputPass {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 14px 14px 78px;
+width: 100%;
+height: 44px;
+background-color: var(--dark-grey);
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 12px;
+line-height: 133%;
+letter-spacing: -0.02em;
+color: var(--white); 
+}
+input::placeholder {
+    font-weight: 500;
+font-size: 12px;
+line-height: 133%;
+letter-spacing: -0.02em;
+color: #f9f9f9;
+}
+.inputWrapper {
+    position: relative;
+    width: 100%;
+}
+.label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 12px;
+line-height: 133%;
+letter-spacing: -0.02em;
+text-align: center;
+color: var(--gray);
+}
+.eyeIcon {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 18px;
+    height: 18px;
+    fill: var(--dark-grey);
+    stroke: var(--white);
+}
+
+.error {
+    position:absolute;
+    top: 30px;
+    right: 50px;
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 10px;
+line-height: 133%;
+letter-spacing: -0.02em;
+color: #e90516;
+}
+
+
+.submitBtn {
+    border-radius: 30px;
+padding: 12px 45px;
+width: 131px;
+height: 42px;
+background-color: var(--white);
+font-family: var(--font-family);
+font-weight: 700;
+font-size: 14px;
+line-height: 129%;
+letter-spacing: 0.02em;
+color: #1f1f1f;
+margin-right: 14px;
+}
+
+.link {
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 12px;
+line-height: 117%;
+letter-spacing: -0.02em;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+text-align: center;
+color: #686868;
+}
+.logoText {
+    display: none;
+}
+.img {
+    width: 255px;
+height: 331px;
+    background-image: image-set(
+      url('/img/log1x.png') 1x,
+      url('/img/log2x.png') 2x
+    );
+background-repeat: no-repeat;
+background-size: contain;
+
+}
+
+@media screen and (min-width: 768px) {
+    .logBox {
+        padding: 40px 168px 214px 64px;
+    }
+    .logoWrapper {
+        display: flex;
+        gap: 4px;
+    }
+    .logoText {
+        display: block;
+        font-weight: 700;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+color: #f9f9f9;
+    }
+    .title {
+        font-size: 64px;
+line-height: 94%;
+margin-top: 157px;
+margin-bottom: 40px;
+width: 444px;
+    }
+
+    .input {
+        padding: 16px 14px 16px 53px;
+height: 50px;
+    }
+
+    .label {
+        font-size: 14px;
+line-height: 129%;
+top: 16px;
+    }
+    .inputPass {
+        padding: 16px 14px 16px 86px;
+
+height: 50px;
+    }
+    .inputBox {
+        margin-bottom: 146px;
+    }
+    .eyeIcon {
+        right: 15px;
+        top: 15px;
+    }
+    .prevBox {
+        display: none;
+    }
+    .submitBtn {
+        font-size: 20px;
+line-height: 100%;
+letter-spacing: 0.02em;
+margin-right: 20px;
+padding: 16px 54px;
+width: fit-content;
+height: 52px;
+    }
+    .link {
+        font-size: 14px;
+line-height: 129%;
+    }
+    
+  }
+  
+  @media screen and (min-width: 1280px) {
+    .section {
+        display: flex;
+        gap: 16px;
+justify-content: center;
+    }
+    .logBox {
+        padding: 40px 64px;
+        margin: 0;
+        display: block;
+    
+    }
+    .prevBox {
+        display: block;
+        padding: 80px 98px 0px;
+    }
+    .img {
+        width: 405px;
+        height: 100%;
+        background-image: image-set(
+          url('/img/desk1x.png') 1x,
+          url('/img/desk2x.png') 2x
+        );
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    }
+    .title {
+        margin-top: 107px;
+        font-size: 64px;
+line-height: 94%;
+    }
+  }

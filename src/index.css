@@ -1,0 +1,117 @@
+@import "modern-normalize/modern-normalize.css";
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('/fonts/SFProText-Semibold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --font-family: "Gilroy", sans-serif;
+  --second-family: "SF Pro Text", sans-serif;
+  --black: #141414;
+  --light-black: #1f1f1f;
+  --dark-grey:  #262626;
+  --gray: rgba(227, 227, 227, 0.3);
+  --light-gray: #686868;
+  --white:  #f9f9f9;
+  --blue: #4f92f7;
+  --green: #30b94d;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+ background-color: var(--black);
+ color: var(--white);
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-text-fill-color: var(--white);
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+.container {
+  min-width: 320px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
