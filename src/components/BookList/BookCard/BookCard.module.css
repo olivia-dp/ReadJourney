@@ -1,0 +1,23 @@
+.bookBox {
+    width: 137px;
+
+}
+.img {
+    border-radius: 8px;
+width: 137px;
+height: 208px;
+}
+.title {
+    font-weight: 700;
+font-size: 14px;
+line-height: 129%;
+letter-spacing: -0.02em;
+color: #f9f9f9;
+}
+.author {
+    font-weight: 500;
+font-size: 10px;
+line-height: 120%;
+letter-spacing: -0.02em;
+color: #686868;
+}

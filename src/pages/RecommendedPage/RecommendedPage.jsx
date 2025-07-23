@@ -1,9 +1,10 @@
 import React from 'react'
+import BookList from '../../components/BookList/BookList/BookList'
 
 const RecommendedPage = () => {
   return (
     <div>
-      <p>Recommended</p>
+      <BookList/>
     </div>
   )
 }
