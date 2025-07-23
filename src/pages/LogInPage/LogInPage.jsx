@@ -4,7 +4,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "../../schemas/schemas";
 
 import s from "./LoginPage.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { loginThunk } from "../../redux/auth/operations";
+import { useDispatch } from "react-redux";
 
 const LogInPage = () => {
   const {
@@ -15,6 +17,16 @@ const LogInPage = () => {
     resolver: yupResolver(loginSchema),
     mode: "onChange"
   });
+const dispatch = useDispatch();
+const navigate = useNavigate();
+
+  const onSubmit = (values) => {
+    let data = { ...values };
+    delete data.confirmPassword;
+    dispatch(loginThunk(data))
+      .unwrap()
+      .then(() => navigate("/"));
+  };
 
   const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -30,7 +42,7 @@ const LogInPage = () => {
         <h1 className={s.title}>
           Expand your mind, reading <span className={s.accent}>a book</span>
         </h1>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className={s.inputBox}>
             <div className={s.inputWrapper}>
                 <input

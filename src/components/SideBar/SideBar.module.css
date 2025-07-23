@@ -1,0 +1,98 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 200px;
+    height: 100vh;
+    padding: 280px 40px 40px;
+    background-color: #262626;
+    color: var(--white);
+    transition: right 0.3s ease; 
+    z-index: 1000;
+    
+  }
+  
+  .sidebar.open {
+    right: 0; 
+  }
+  
+  
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(20, 20, 20, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+  }
+  
+  .backdrop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .btnClose {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 34px;
+    right: 40px;
+  }
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 100%;
+}
+.linkBox {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+} 
+  .link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    color: #686868;
+}
+.active {
+    width: fit-content;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    color: #f9f9f9;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+  .active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--blue);
+    border-radius: 8px; 
+  }
+
+  .btn {
+    border: 1px solid rgba(249, 249, 249, 0.2);
+border-radius: 30px;
+padding: 10px 20px;
+background-color: inherit;
+height: 38px;
+font-weight: 700;
+font-size: 14px;
+line-height: 129%;
+letter-spacing: 0.02em;
+color: #f9f9f9;
+  }

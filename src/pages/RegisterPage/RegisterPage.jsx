@@ -4,7 +4,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "../../schemas/schemas";
 
 import s from "./RegisterPage.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { registerThunk } from "../../redux/auth/operations";
+import { useDispatch } from "react-redux";
 
 const RegisterPage = () => {
   const {
@@ -15,6 +17,18 @@ const RegisterPage = () => {
     resolver: yupResolver(registerSchema),
     mode: "onChange"
   });
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const onSubmit = (values) => {
+    let data = { ...values };
+    dispatch(registerThunk(data))
+      .unwrap()
+      .then(() => navigate("/"));
+  };
+
+
 
   const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -30,7 +44,7 @@ const RegisterPage = () => {
         <h1 className={s.title}>
           Expand your mind, reading <span className={s.accent}>a book</span>
         </h1>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className={s.inputBox}>
           <div className={s.inputWrapper}>
                 <input

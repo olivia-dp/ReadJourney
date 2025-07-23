@@ -7,7 +7,7 @@ const NotFoundPage = () => {
       <div className={s.wrapper}>
         <p className={s.notFound}>404</p>
         <p className={s.text}>Page not found!</p>
-        <Link to="/dashboard/home" className={s.multiColorButton}>
+        <Link to="/" className={s.multiColorButton}>
           go home
         </Link>
       </div>
